@@ -1,52 +1,24 @@
-LineageOS
-===========
+# LineageOS for Security Research
 
-Submitting Patches
-------------------
+Sync url is set to [Tsinghua LineageOS Mirror](https://mirror.tuna.tsinghua.edu.cn/help/lineageOS/).
 
-Patches are always welcome!  Please submit your patches via LineageOS Gerrit.
-You can do this by using these commands:
+## Getting Started
 
-    (From root android directory)
-    . build/envsetup.sh
-    (Go to repo you are patching, make your changes and commit)
-    cmgerrit <for(new)/changes(patch set)> <branch/change-id>
+To initialize your local repository, use a command like this:
 
-    repo start cm-14.1 .
-    (Make your changes and commit)
-    repo upload .
+    repo init -u https://github.com/ikey4u/android.git -b android-7.1.2_r36
 
-Note: "." means the current directory
-For more help on using this tool, use this command: `repo help upload`
+Then to sync up, using the following script(you could save it as sync.sh)
 
-Make your changes and commit with a detailed message, starting with what you are working with (i.e. "vision: Update Kernel")
-Commit your patches in a single commit. Squash multiple commits using this command: `git rebase -i HEAD~<# of commits>`
-
-To view the status of your and others' patches, visit [LineageOS Code Review](https://review.lineageos.org/)
-
-
-Getting Started
----------------
-
-To get started with Android/LineageOS, you'll need to get
-familiar with [Git and Repo](https://source.android.com/source/using-repo.html).
-
-To initialize your local repository using the LineageOS trees, use a command like this:
-
-    repo init -u git://github.com/LineageOS/android.git -b cm-14.1
-
-Then to sync up:
-
+    #!/bin/bash
+    echo "======start repo sync======"
     repo sync
+    while [ $? == 1 ]; do
+    echo "======sync failed, re-sync again======"
+    sleep 3
+    repo sync
+    done
+
+## Build
 
 Please see the [LineageOS Wiki](https://wiki.lineageos.org/) for building instructions.
-
-
-Buildbot
---------
-
-All supported devices are built weekly and periodically as changes are committed to ensure the source trees remain buildable.
-
-You can view the current build statuses at [LineageOS Jenkins](https://jenkins.lineageos.org/)
-
-Builds produced weekly by the buildbot can be downloaded from [LineageOS downloads](https://download.lineageos.org/)
