@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="lineage"
+		   fetch="git://172.20.109.112/mirror/lineage" />
+
+  <remote  name="aosp"
+		   fetch="git://172.20.109.112/mirror/aosp"
+		   revision="refs/tags/android-7.1.2_r36" />
+
+  <default revision="refs/heads/cm-14.1"
+		   remote="lineage"
+		   sync-c="true"
+		   sync-j="4" />
+
+  <include name="libs/aosp.xml" />
+
+  <include name="libs/cm.xml" />
+
+</manifest>

@@ -2,20 +2,21 @@
 <manifest>
 
   <remote  name="github"
-		   fetch="https://github.com/" />
+           fetch="https://github.com/LineageOS"
+           review="review.lineageos.org" />
 
-  <remote  name="lineage"
-		   fetch="https://mirrors.tuna.tsinghua.edu.cn/git/lineageOS/"
-		   review="review.lineageos.org" />
+  <remote  name="private"
+           fetch="ssh://git@github.com" />
 
   <remote  name="aosp"
-		   fetch="https://aosp.tuna.tsinghua.edu.cn"
-		   revision="refs/tags/android-7.1.2_r36" />
+           fetch="https://android.googlesource.com"
+           review="android-review.googlesource.com"
+           revision="refs/tags/android-7.1.2_r36" />
 
   <default revision="refs/heads/cm-14.1"
-		   remote="lineage"
-		   sync-c="true"
-		   sync-j="4" />
+           remote="github"
+           sync-c="true"
+           sync-j="4" />
 
   <include name="libs/aosp.xml" />
 
