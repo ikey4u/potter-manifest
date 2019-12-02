@@ -2,10 +2,10 @@
 <manifest>
 
   <remote  name="lineage"
-		   fetch="git://172.20.109.112/mirror/lineage" />
+		   fetch="git://172.20.109.112/lineage" />
 
   <remote  name="aosp"
-		   fetch="git://172.20.109.112/mirror/aosp"
+		   fetch="git://172.20.109.112/aosp"
 		   revision="refs/tags/android-7.1.2_r36" />
 
   <default revision="refs/heads/cm-14.1"
