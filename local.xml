@@ -2,7 +2,7 @@
 <manifest>
 
   <remote  name="github"
-           fetch="https://github.com/LineageOS" />
+           fetch="https://github.com" />
 
   <remote  name="lineage"
 		   fetch="git://172.20.109.112/lineage" />
