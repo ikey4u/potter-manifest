@@ -23,4 +23,6 @@
 
   <include name="libs/cm.xml" />
 
+  <include name="libs/dktree.xml" />
+
 </manifest>
