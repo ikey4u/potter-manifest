@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote  name="github"
+           fetch="https://github.com/LineageOS" />
+
   <remote  name="lineage"
 		   fetch="https://mirrors.tuna.tsinghua.edu.cn/git/lineageOS/"
 		   review="review.lineageos.org" />
