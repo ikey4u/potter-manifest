@@ -52,6 +52,12 @@ commands
     source build/envsetup.sh
 	lunch lineage_angler-eng
 
+    ccache -M 50G
+    export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx8G"
+
+    croot
+    mka bacon
+
 # Modification
 
 - Change of manifest
