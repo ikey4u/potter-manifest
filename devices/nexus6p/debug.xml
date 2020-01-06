@@ -10,9 +10,9 @@
   <remote  name="lineage"
 		   fetch="git://172.20.109.112/lineage" />
 
-  <!-- server holding patched codes -->
+      <!-- server holding patched codes, the fetch url here is ssh config prefix -->
   <remote name="gitea"
-           fetch="http://172.20.109.112:3000/bugnofree" />
+      fetch="gitea:bugnofree" />
 
   <default revision="refs/heads/cm-14.1"
 		   remote="lineage"
