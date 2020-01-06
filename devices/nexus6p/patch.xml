@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="android_device_huawei_angler" path="device/huawei/angler" remote="gitea" />
+  <project name="android_kernel_huawei_angler" path="kernel/huawei/angler" remote="gitea" />
+</manifest>

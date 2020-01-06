@@ -1,30 +1,24 @@
+If you ever want to easily customize an Android Operating System for yourself,
+then you are in the right place.
+
 # Get source
 
-Select an entry manifest from three alternatives to initialize `.repo`
-repository
+## Development with a local mirror
 
-- local.xml
+You should first fork this repository and change `devices/<device>/debug.xml` to
+fit your own need.
 
-    If you have a local mirror of LineageOS and AOSP project, you may be
-    interested in this entry.
+I have made a local mirror of AOSP and LineageOS locally, so I will use
+debug.xml to make everything works smoothly.
 
-- default.xml
-
-    Download AOSP from Google and LineageOS related parts from Github.
-
-- tsinghua.xml
-
-    Download AOSP and LineageOS from Tsinghua mirror, good for China users.
-
-Take `local.xml` as an example and assume the source directory is `potter`,
-you may do something like below
+Assume the source directory is `potter`, you may do something like below
 
     mkdir -p potter && cd potter
-    repo init -u https://github.com/ikey4u/potter-manifest.git -b android-7.1.2_r36 -m local.xml --repo-url https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/
+    repo init -u https://github.com/ikey4u/potter-manifest.git -b 7.1.2_r36 -m devices/nexus6p/debug.xml --repo-url https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/
     repo sync
 
 `repo sync` may take a long time and break if your network is not stable. Try
-the follwing script
+the following script
 
 	#! /bin/zsh
 
@@ -71,3 +65,21 @@ commands
     dktree remote tag is essentially the same as github tag, lineage will use
     github tag to retrive projects, this change will make the build process a little different,
 	see Build section for more details.
+
+# TODO
+
+Select an entry manifest from three alternatives to initialize `.repo`
+repository
+
+- local.xml
+
+    If you have a local mirror of LineageOS and AOSP project, you may be
+    interested in this entry.
+
+- default.xml
+
+    Download AOSP from Google and LineageOS related parts from Github.
+
+- tsinghua.xml
+
+    Download AOSP and LineageOS from Tsinghua mirror, good for China users.

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- aosp mirror -->
+  <remote  name="aosp"
+		   fetch="git://172.20.109.112/aosp"
+		   revision="refs/tags/android-7.1.2_r36" />
+
+  <!-- lineage mirror -->
+  <remote  name="lineage"
+		   fetch="git://172.20.109.112/lineage" />
+
+  <!-- server holding patched codes -->
+  <remote name="gitea"
+           fetch="http://172.20.109.112:3000/bugnofree" />
+
+  <default revision="refs/heads/cm-14.1"
+		   remote="lineage"
+		   sync-c="true"
+		   sync-j="4" />
+
+  <!-- aosp and lineage projects -->
+  <include name="../../libs.xml" />
+
+  <!-- patched projects -->
+  <include name="patch.xml" />
+
+</manifest>
