@@ -2,22 +2,15 @@
 <manifest>
 
   <!-- aosp mirror -->
-  <remote  name="aosp"
-		   fetch="git://172.20.109.112/aosp"
-		   revision="refs/tags/android-7.1.2_r36" />
+  <remote  name="aosp" fetch="git://172.20.109.112/aosp" revision="refs/tags/android-7.1.2_r36" />
 
   <!-- lineage mirror -->
-  <remote  name="lineage"
-		   fetch="git://172.20.109.112/lineage" />
+  <remote  name="lineage" fetch="git://172.20.109.112/lineage" />
 
-      <!-- server holding patched codes, the fetch url here is ssh config prefix -->
-  <remote name="gitea"
-      fetch="gitea:bugnofree" />
+  <!-- server holding patched codes, the fetch url here is ssh config prefix -->
+  <remote name="gitea" fetch="gitea:bugnofree" />
 
-  <default revision="refs/heads/cm-14.1"
-		   remote="lineage"
-		   sync-c="true"
-		   sync-j="4" />
+  <default revision="refs/heads/cm-14.1" remote="lineage" sync-c="true" sync-j="4" />
 
   <!-- aosp and lineage projects -->
   <include name="libs.xml" />
