@@ -20,9 +20,9 @@
 		   sync-j="4" />
 
   <!-- aosp and lineage projects -->
-  <include name="../../libs.xml" />
+  <include name="libs.xml" />
 
   <!-- patched projects -->
-  <include name="patch.xml" />
+  <include name="devices/nexus6p/patch.xml" />
 
 </manifest>
